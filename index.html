@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <style>
+
+.img-fluida{margin-top: 20px;}
+.img-fluid{margin-bottom: 20px;}
+
+h2 {text-align: center; margin-top: 20px;}
+@-webkit-keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-250px * 7));
+            transform: translateX(calc(-250px * 7));
+  }
+}
+
+@keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-250px * 7));
+            transform: translateX(calc(-250px * 7));
+  }
+}
+.slider {
+  background: pr;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+  height: 100px;
+  margin: auto;
+  margin-bottom: 30px;
+  overflow: hidden;
+  position: relative;
+  width: 960px;
+}
+.slider::before, .slider::after {
+  background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+.slider::after {
+  right: 0;
+  top: 0;
+  -webkit-transform: rotateZ(180deg);
+          transform: rotateZ(180deg);
+}
+.slider::before {
+  left: 0;
+  top: 0;
+}
+.slider .slide-track {
+  -webkit-animation: scroll 40s linear infinite;
+          animation: scroll 40s linear infinite;
+  display: flex;
+  width: calc(250px * 14);
+}
+.slider .slide {
+  height: 100px;
+  width: 250px;
+}
+
+
+
+    * {
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    
+      margin: 0;
+      padding: 0;
+    }
+    
+    .flex-container {
+      display: flex;
+      padding: 2em;
+      font-family: 'Montserrat', sans-serif;
+    
+    }
+    
+    .flex-item {
+      flex: 1;
+      width: 0;
+    }
+    
+    .flex-item:not(:last-child) {
+      margin-right: 1.9em;
+    }
+    
+    .package {
+      border: 1px solid #e09f3e;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      transition: 0.25s;
+    }
+    
+    .package:hover {
+      box-shadow: 0 8px 12px 0 rgba(214, 206, 206, 0.514);
+      transform: scale(1.025);
+    }
+    
+    .package .header {
+      background-color: #ff6b6b ;
+      color: #fff;
+      font-size: 1.5em;
+    }
+    .package .headers {
+      background-color:#218380;
+      color: #fff;
+      font-size: 1.5em;
+    }
+    .package .highlight {
+      background-color: #293241;
+    }
+    
+    .package li {
+      background-color: rgb(255, 255, 255);
+      border-bottom: 1px solid #eee;
+      color: rgb(0, 0, 0);
+      padding: 1.3em;
+      text-align: center;
+    }
+    .package .gray {
+      background-color: #eee;
+      color: black;
+      font-family: 'Montserrat', sans-serif;
+    
+      font-size: 1.25em;
+    }
+    button {
+      background-color: #29b6f6;
+      border: none;
+      border-radius: .15em;
+      color: #fff;
+      cursor: pointer;
+      padding: .75em 1.5em;
+      font-size: 1em;
+    }
+    
+    @media only screen and (max-width: 700px) {
+      button {
+        padding: .75em;
+      }
+    }
+    
+    @media only screen and (max-width: 600px) {
+      .flex-container {
+        flex-wrap: wrap;
+      }
+    
+      .flex-item {
+        flex: 0 0 100%;
+        margin-bottom: 1em;
+        width: 100%;
+      }
+    
+      .package:hover {
+        box-shadow: none;
+        transform: none;
+      }
+    
+      button {
+        padding: .75em 1.5em;
+      }
+    }
+    
+    
+    
+    
+    
+    
+    body {
+        font-family: 'Montserrat', sans-serif;
+    }
+    
+    .header-nightsky {
+        color: white;
+        /* background: linear-gradient(to right, #6699ff 0%, #ff99cc 100%); */
+        /* background: linear-gradient(to left, #6699ff 0%, #ff99cc 100%); */
+        /* background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%); */
+    
+        /* background:#fff; */
+        background: url("../assets/img/back.jpg") no-repeat;
+        background-size: cover;
+        background-position: bottom;
+        padding-bottom: 100px;
+    }
+    
+    .header-nightsky .navbar-nav>li>a {
+        color: white;
+        font-size: 18px;
+        border-radius: 10px;
+    }
+    
+    .header-nightsky .navbar {
+        margin-bottom: 0px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        width: 100%;
+        border-bottom:none;
+        background-color: transparent;
+        min-width: 300px;
+        border: none;
+    }
+    
+    .header-nightsky .navbar-default .navbar-nav>.open>a,
+    .header-nightsky .navbar-default .navbar-nav>.open>a:focus,
+    .header-nightsky .navbar-default .navbar-nav>.open>a:hover {
+        color: #ccc;
+        background-color: transparent;
+    }
+    
+    .header-nightsky .nav>li>a:focus,
+    .header-nightsky .nav>li>a:hover {
+        color: #ccc;
+        background-color: transparent;
+    }
+    
+    .header-nightsky .navbar-nav>li {
+        margin-right: 20px;
+    }
+    
+    .header-nightsky .navbar-nav {
+       margin-top: 12px;
+    }
+    
+    .header-nightsky .navbar-toggle {
+        background-color: transparent !important;
+        margin-top: 20px;
+        border: 1px solid #fff;
+    }
+    
+    .header-nightsky .navbar-toggle .icon-bar {
+        background-color: white;
+    }
+    
+    .header-nightsky .navbar-brand {
+        color: white;
+        font-size: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .header-nightsky .navbar-brand:hover {
+        color: #ccc;
+    }
+    
+    .header-nightsky .hero {
+        text-align: center;
+        margin-top: 80px;
+        margin-bottom: 100px;
+    }
+    
+    .header-nightsky .hero h1 {
+        color: white;
+        font-weight: bold;
+        font-size: 60px;
+        margin-bottom: 36px;
+    }
+    
+    
+    .header-nightsky .hero p {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 22px;
+        max-width: 660px;
+        margin: 0 auto 20px;
+        font-weight: normal;
+        line-height: 1.5;
+    }
+    
+    .header-nightsky .btn-primary {
+        color: #fff;
+        background-color: transparent;
+        border-color: #fffbfb !important;
+        outline:none;
+        margin-right: 20px;
+        margin-top: 20px;
+        font-size: 24px;
+        padding: 18px 24px;
+        transition:0.2s background-color;
+    }
+    
+    .header-nightsky .btn-primary:hover {
+        background-color:rgba(255,255,255,0.1);
+    }
+    
+    .header-nightsky .btn-primary:active {
+        transform:translateY(1px);
+    }
+    
+    @media screen and (max-width: 767px) {
+    
+        .header-nightsky .navbar-default .navbar-nav .open .dropdown-menu>li>a{
+            color: #fff;
+            font-size: 16px;
+        }
+    
+        .header-nightsky .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover{
+            color: #ccc;
+        }
+    
+        .header-nightsky .navbar-collapse {
+            margin-left: 20px;
+            border-top: none;
+            box-shadow: none;
+        }
+    
+        .header-nightsky .hero{
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+    
+        .header-nightsky .hero h1{
+            font-size: 42px;
+        }
+    }
+    
+    
+    </style>
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <title>S-info</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+  <!-- <link href="scss/check.scss" rel="stylesheet/scss" type="text/css"> -->
+
+  <!-- Plugin CSS -->
+  <link rel="stylesheet" href="device-mockups/device-mockups.min.css">
+
+  <!-- Custom styles for this template -->
+  <link href="css/new-age.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <!-- <img src="/img/logo.png"  alt="logo" style="width:200px;height:120px;"> -->
+      <img src="img/slogo.png" class="img-fluida" alt="" style="width:100px;height:60px;" >
+
+      <!-- <a class="navbar-brand js-scroll-trigger" href="#page-top">S-Infotech</a> -->
+      <!-- <h3></h3> -->
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#download">Plans</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#features">Marketing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="masthead">
+    <div class="container h-100">
+      <div class="row h-100">
+        <div class="col-lg-7 my-auto">
+          <div class="header-content mx-auto">
+            <h1 class="mb-5">Digital marketing is the method by which companies endorse goods, services, and brands.</h1>
+            <a href="#download" class="btn btn-outline btn-xl js-scroll-trigger">CHECK OUR PLAN!</a>
+          </div>
+        </div>
+        <div class="col-lg-5 my-auto">
+          <!-- <div class="device-container">
+            <div class="device-mockup iphone6_plus portrait white">
+              <div class="device">
+                <div class="screen"> -->
+                  <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
+                  <img src="img/management.png" class="img-fluid" alt="">
+                <!-- </div>
+                <div class="button">
+                  You can hook the "home button" to some JavaScript events or just remove it
+                </div>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="download bg-primary text-center" id="download">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 mx-auto">
+          <h2 class="section-heading">Discover what are the plans we have!</h2>
+          <p>We have offered three plans for our customers.</p>
+          <!-- <div class="badges">
+            <a class="badge-link" href="#"><img src="img/google-play-badge.svg" alt=""></a>
+            <a class="badge-link" href="#"><img src="img/app-store-badge.svg" alt=""></a>
+          </div> -->
+        </div>
+      </div>
+      <div class="flex-container" >
+        <div class="flex-item">
+          <ul class="package">
+            <li class="header">Bronze</li>
+            <li class="gray">Service Include</li>
+            <li>Facebook Promotion</li>
+            <li>Instagram Promotion</li>
+            <li>--</li>
+            <li>--</li>
+         
+          </ul>
+        </div>
+       
+        <div class="flex-item">
+         <ul class="package">
+            <li class="headers">Gold</li>
+            <li class="gray">Service Include</li>
+            <li>Facebook Promotion</li>
+            <li>Instagram Promotion</li>
+            <li>--</li>
+            <li>--</li>
+           
+          </ul>
+        </div>
+        <div class="flex-item">
+          <ul class="package">
+            <li class="header highlight">Platinum</li>  
+            <li class="gray">Service Include</li>
+            <li>Facebook Promotion</li>
+            <li>Instagram Promotion</li>
+            <li>--</li>
+            <li>--</li>
+      
+          </ul>
+        </div>
+      </div>
+      <p>Business Dreams getting near.</p>
+
+  
+    </div>
+  </section>
+
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-heading text-center">
+        <h2>Performance Marketing Services</h2>
+        <p class="text-muted">Services that enable your measurable growth</p>
+        <hr>
+      </div>
+      <div class="row">
+        <!-- <div class="col-lg-4 my-auto">
+          <div class="device-container">
+            <div class="device-mockup iphone6_plus portrait white">
+              <div class="device">
+                <div class="screen"> -->
+                  <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
+                  <img src="img/consultancy.jpg" class="img-fluid" alt="" style="width:350px;height:400px;">
+                <!-- </div>
+                <div class="button">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+        <div class="col-lg-8 my-auto">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="feature-item">
+                  <!-- <i class="icon-screen-smartphone text-primary"></i> -->
+                  <img src="img/facebook.png" class="img-fluid" alt="" style="width:200px;height:110px;">
+
+                  <h3>Facebook</h3>
+                  <p class="text-muted">Since Facebook permits a quick interaction between the brand and its leads makes for a great platform for marketing and for building brand loyalty. We make sure that that ‘quick interaction’ is effective, a consequence of innovative campaigns boosting your brand identity.</p>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="feature-item">
+                  <!-- <i class="icon-screen-smartphone text-primary"></i> -->
+                  <img src="img/instagram.png" class="img-fluid" alt="" style="width:200px;height:110px;">
+
+                  <h3>Instagram</h3>
+                  <p class="text-muted">With an unprecedented audience on instagram, targeting and retargeting is not only better than other platforms but tricky as well. What we create is strategized content that does not just please the visual sense but also tells a story of your brand.</p>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="feature-item">
+                  <!-- <i class="icon-screen-smartphone text-primary"></i> -->
+                  <img src="img/Google-ads.png" class="img-fluid" alt="" style="width:200px;height:110px;">
+
+                  <h3>Google Ads</h3>
+                  <p class="text-muted">While the destination a brand desires via Google Ads is to reach a lead the minute they go online, it’s the journey that requires every strategic trick in the bag. We create an equilibrium of Geotargeting, budgeting, the right keywords and bid strategy to ensure sales.</p>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="feature-item">
+                  <!-- <i class="icon-camera text-primary"></i> -->
+                  <img src="img/designing.png" class="img-fluid" alt="" style="width:200px;height:110px;">
+
+                  <h3>Designing</h3>
+                  <p class="text-muted">Our in-house team of experienced developers and UX designers create bespoke digital experiences for your end-customer. (yes, we abide by responsive design)</p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="feature-item">
+                  <!-- <i class="icon-present text-primary"></i> -->
+                  <img src="img/linkedin.png" class="img-fluid" alt="" style="width:200px;height:110px;">
+
+                  <h3>Linkdin</h3>
+                  <p class="text-muted">A paramount tool in marketing, LinkedIn is a solid platform to not only generate new leads but retain the existing ones, as well. With a precise and spot on execution, we drive the desired audience to your brand, thus getting an edge to connect with them.</p>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="feature-item">
+                  <!-- <i class="icon-lock-open text-primary"></i> -->
+                  <img src="img/seo.png" class="img-fluid" alt="" style="width:200px;height:110px;">
+
+                  <h3>SEO</h3>
+                  <p class="text-muted">Irrevocably, search engines beat all other platforms in terms of purchase intent, hands down. So our efforts are mixed across on-page/off-page SEO coupled with Google & Bing Search Ads campaigns.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <h2>Our Client</h2>
+
+  <div class="slider">
+
+    <div class="slide-track">
+
+      <div class="slide">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" />
+      </div>
+      <div class="slide">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="" />
+      </div>
+      <div class="slide">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="" />
+      </div>
+      <div class="slide">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="" />
+      </div>
+      <div class="slide">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
+      </div>
+      <div class="slide">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
+      </div>
+      <div class="slide">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
+      </div>
+      <div class="slide">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" />
+      </div>
+      <div class="slide">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="" />
+      </div>
+      <div class="slide">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="" />
+      </div>
+      <div class="slide">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="" />
+      </div>
+      <div class="slide">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
+      </div>
+      <div class="slide">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
+      </div>
+      <div class="slide">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
+      </div>
+    </div>
+  </div>
+
+
+  <section class="cta">
+    <div class="cta-content">
+      <div class="container">
+        
+        <h2>Stop waiting.<br>Contact us.</h2>
+        <a href="#contact" class="btn btn-outline btn-xl js-scroll-trigger">connect us!</a>
+      </div>
+    </div>
+    <div class="overlay"></div>
+  </section>
+
+  <section class="contact bg-primary" id="contact">
+    <div class="container">
+      <h2>We
+        <i class="fas fa-heart"></i>
+        new clients!</h2>
+      <ul class="list-inline list-social">
+        <li class="list-inline-item social-twitter">
+          <a href="#">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </li>
+        <li class="list-inline-item social-facebook">
+          <a href="#">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+        </li>
+        <li class="list-inline-item social-google-plus">
+          <a href="#">
+            <i class="fab fa-google-plus-g"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy;  Website 2020. All Rights Reserved.</p>
+      <ul class="list-inline">
+        <li class="list-inline-item">
+          <a href="#">Privacy</a>
+        </li>
+        <li class="list-inline-item">
+          <a href="#">Terms</a>
+        </li>
+        <li class="list-inline-item">
+          <a href="#">FAQ</a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/new-age.min.js"></script>
+
+</body>
+
+</html>
